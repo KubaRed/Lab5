@@ -68,11 +68,11 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 		   }
 		   else if (objectNumber == 2 )
 		   {
-			   Added_Poligon(gl2, 2);	
+			   Added_Poligon(gl2, 1.3);	
 		    }
 		   else if (objectNumber == 3 )
 		   {
-			   circle_Triangle(gl2,100,2,10); 
+			   n_Triangle(gl2,20,5,10); 
 		   }
 
 	}
@@ -171,7 +171,7 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 		gl2.glEnd();
 
 	}
-	public void circle_Triangle (GL2 gl2,int n , int r, int h)
+	public void n_Triangle (GL2 gl2,int n , int r, int h)
 	{
 		Podstawa (gl2 , n , r);
 	    for (int i=0;i<=n;i++)
