@@ -60,43 +60,27 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 		// (Objects should lie in the cube with x, y, and z coordinates in the
 		// range -5 to 5.)
 		
-		if (objectNumber == 1)
-		   {
-			
-			corkscrew(gl2,1.5); 
-
-		   }
-		   else if (objectNumber == 2 )
-		   {
-			   Added_Poligon(gl2, 1.3);	
-		    }
-		   else if (objectNumber == 3 )
-		   {
-			   n_Triangle(gl2,20,5,10); 
-		   }
+		if (objectNumber == 1) {corkscrew(gl2,1.5);  }
+		   else if (objectNumber == 2 ){Added_Poligon(gl2, 1.3); }
+		   else if (objectNumber == 3) { n_Triangle(gl2,20,5,10); }
 
 	}
 	public void corkscrew(GL2 gl2, double size)
 	{
-		gl2.glScaled(size,size,size);
-		gl2.glPushMatrix(); 
-		gl2.glColor3f(1.0f, 0.0f, 0.0f);
-		gl2.glRotated(-90, 0, 0, 1);
-		gl2.glTranslated(-5.8,-2.5,0);
-		walec(gl2, 10, 0.4, 2, 0.4);
+
 		gl2.glPopMatrix();
 		gl2.glPushMatrix();
-		gl2.glColor3f(1.0f, 1.0f, 1.0f);
+		gl2.glColor3f(1.0f, 0.0f, 1.0f);
 		gl2.glScaled(0.35,1,0.35);
 		gl2.glBegin(gl2.GL_LINE_STRIP);   
 		 
-		for(double j=0.1,i = 0; i < 300; i++,j+=0.1) 
+		for(double j=0.1,i = 0; i < 700; i++,j+=0.1) 
 		 {
-		 if (i<=100)
+		 if (i<=200)
 		 gl2.glColor3f(0.0f, 1.0f, 0.0f);//z
-		 else if (i<=200)
+		 else if (i<=400)
 		 gl2.glColor3f(0.0f, 0.0f, 1.0f);//n
-		 else if (i<=300)
+		 else if (i<=700)
 		 gl2.glColor3f(0.2f, 0.1f, 0.0f);//B
 		 gl2.glVertex3d(Math.cos(i/10.0),i/50.0,Math.sin(i/10.0));
 		 }
@@ -105,15 +89,6 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 
 	   }
 	
-	public void Triangle (GL2 gl2 , float r , float g ,float b )
-	{
-		gl2.glColor3f(r,g,b);
-		gl2.glBegin(GL2.GL_POLYGON);
-		gl2.glVertex3d(5, 0.5, 0);
-		gl2.glVertex3d(0, 5, 0);
-		gl2.glVertex3d(2.5, 0.5,4.333);
-		gl2.glEnd ();
-	}
 	
 	public void Added_Poligon(GL2 gl2, double size)
 	{
@@ -157,6 +132,15 @@ public class Lab5 extends GLJPanel implements GLEventListener, KeyListener{
 		
 	}
 	
+	public void Triangle (GL2 gl2 , float r , float g ,float b )
+	{
+		gl2.glColor3f(r,g,b);
+		gl2.glBegin(GL2.GL_POLYGON);
+		gl2.glVertex3d(5, 0.5, 0);
+		gl2.glVertex3d(0, 5, 0);
+		gl2.glVertex3d(2.5, 0.5,4.333);
+		gl2.glEnd ();
+	}
 	
 	public void Podstawa (GL2 gl2,int n , int r)
 	{
